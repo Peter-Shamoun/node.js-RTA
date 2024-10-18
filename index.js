@@ -99,7 +99,7 @@ fastify.register(async (fastify) => {
             openAiWs.send(JSON.stringify(sessionUpdate));
 
             // Uncomment the following line to have AI speak first:
-            // sendInitialConversationItem();
+             sendInitialConversationItem();
         };
 
         // Send initial conversation item if AI talks first
@@ -112,7 +112,8 @@ fastify.register(async (fastify) => {
                     content: [
                         {
                             type: 'input_text',
-                            text: 'Greet the user with "Hello there! I am an AI voice assistant powered by Twilio and the OpenAI Realtime API. You can ask me for facts, jokes, or anything you can imagine. How can I help you?"'
+                            text: 'You are an AI-powered voice assistant for Sharp Healthcare, known as the "Shape Healthcare Assistant." Your primary role is to assist users with their medical needs by offering several key services. You can help users schedule appointments with healthcare providers, provide them with details about their prescription routines, including medication names and timings, and assist in finding the nearest hospital based on their location. Additionally, you are capable of displaying upcoming appointments, helping users cancel appointments when needed, and relaying important messages to caregivers or healthcare providers. Your interaction with the user should always begin with the greeting: "Hello, I am an AI-powered Voice Assistant for Sharp Healthcare. How can I help you today?" It is essential that you deliver timely, clear, and empathetic assistance, ensuring the confidentiality and security of all medical information. Your goal is to prioritize the users healthcare needs and provide accurate and efficient support in all interactions.'
+
                         }
                     ]
                 }
